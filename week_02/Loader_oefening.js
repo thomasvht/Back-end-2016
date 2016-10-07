@@ -2,10 +2,10 @@
 * @Author: thomasvanhoutte
 * @Date:   2016-10-07T15:05:10+02:00
 * @Last modified by:   thomasvanhoutte
-* @Last modified time: 2016-10-07T15:38:43+02:00
+* @Last modified time: 2016-10-07T15:39:27+02:00
 */
 
-var Loader = require("./modLoader.js");
+var Loader = require("./Loader.js");
 
 var users = [];
 var usersIds = ["P1", "P2", "P3", "P4", "ERROR", "P6", "P7", "P8", "P9"];

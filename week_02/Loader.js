@@ -2,7 +2,7 @@
 * @Author: thomasvanhoutte
 * @Date:   2016-10-07T15:09:14+02:00
 * @Last modified by:   thomasvanhoutte
-* @Last modified time: 2016-10-07T15:38:23+02:00
+* @Last modified time: 2016-10-07T15:40:01+02:00
 */
 
 "use strict";
@@ -22,7 +22,7 @@ var Loader = (function () {
             setTimeout(function () { cb(null, element + " is loaded"); }, 1000);
         }
     };
-    var loadArrayAsync = function (arrayA , elements, cb) {
+    var loadArrayAsync = function (array , elements, cb) {
         startTime = new Date().getTime(); //reïnitialize
         var counter = 0;
         for (var element in elements) {
@@ -31,13 +31,13 @@ var Loader = (function () {
             loadAsync(sElement, function (err, element) {
                 counter++;
                 if (err) {
-                    arrayA[counter] = element;
+                    array[counter] = element;
                     cb(err, null);
                 } else {
-                    arrayA[counter] = element; //undefined
-                    console.log(arrayA[counter]);
+                    array[counter] = element; //undefined
+                    console.log(array[counter]);
                     if (counter === elements.length) {
-                        cb(null, arrayA , duration());
+                        cb(null, array , duration());
                     }
                 }
             });
