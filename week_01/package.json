@@ -1,0 +1,25 @@
+{
+  "name": "week_01",
+  "version": "1.0.0",
+  "description": "een eerste labo oefening over async",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "labo01",
+    "week01",
+    "node"
+  ],
+  "author": "Thomas Vanhoutte",
+  "license": "ISC",
+  "jshintConfig": {
+    "esversion": 6,
+    "moz": true,
+    "node": true,
+    "predef": ["MY_GLOBAL"]
+  }
+}
