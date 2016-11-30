@@ -1,0 +1,24 @@
+{
+  "name": "les1",
+  "version": "1.0.0",
+  "description": "een eerste labo les over async",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "labo1",
+    "node"
+  ],
+  "author": "Johan",
+  "license": "ISC",
+  "jshintConfig": {
+    "esversion": 6,
+    "moz": true,
+    "node": true,
+    "predef": [
+      "MY_GLOBAL"
+    ]
+  }
+}

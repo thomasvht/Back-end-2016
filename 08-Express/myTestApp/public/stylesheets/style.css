@@ -1,0 +1,20 @@
+/**
+* @Author: thomasvanhoutte
+* @Date:   2016-11-25T15:02:05+01:00
+* @Last modified by:   thomasvanhoutte
+* @Last modified time: 2016-11-25T23:14:56+01:00
+*/
+
+
+
+body {
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #BCE7FD;
+  background-color: #234567;
+}
+
+a {
+  color: #BCE7FD;
+  background-color: #234567;
+}

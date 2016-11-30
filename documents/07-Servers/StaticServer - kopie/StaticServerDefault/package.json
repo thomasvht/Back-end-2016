@@ -1,0 +1,17 @@
+{
+  "name": "static-server",
+  "version": "0.0.0",
+  "description": "StaticServer",
+  "main": "app.js",
+  "author": {
+    "name": "Johan.Vannieuwenhuy1"
+  },
+  "devDependencies": {
+    "gulp-jshint": "^2.0.4",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

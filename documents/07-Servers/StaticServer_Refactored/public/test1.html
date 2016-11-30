@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>test1.html</title>
+    <link href="css/Stylesheet1.css" rel="stylesheet" />
+    <script src="./scripts/jquery-2.1.1.js"></script>
+</head>
+<body>
+    <section>
+        <p>
+            Dit is de EERSTE html pagina.
+        </p>
+        <p>
+            Hieronder een tabel met jQ zebra strepen.
+        </p>
+        <table class="zebra">
+            <thead>
+                <tr>
+                    <th>Titel</th>
+                    <th>Auteur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Node.js in concert</td>
+                    <td>Johan V</td>
+                </tr>
+                <tr>
+                    <td>Node.js secrets</td>
+                    <td>Kevin D</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <p>
+            <a href="/">terug</a>
+        </p>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            var $table = $('table.zebra')
+
+            $('tbody tr:odd', $table).removeClass('even').addClass('odd');
+            $('tbody tr:even', $table).removeClass('odd').addClass('even');
+        });
+    </script>
+</body>
+</html>

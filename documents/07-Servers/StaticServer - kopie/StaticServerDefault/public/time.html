@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>zomertijd  - wintertijd</title>
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+        }
+
+        fieldset {
+            width: 425px;
+        }
+
+
+        label {
+            vertical-align: top;
+        }
+    </style>
+ 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type="submit"]').on('click', function () {
+                $.ajax({
+                    dataType: "json",
+                    url: "http://localhost:3000",
+                    data: $("#form").serialize(),
+                    success: function (data) {
+                        console.log("success: " + data); //object
+                        document.getElementById("test").innerHTML = "de tijd is nu :" + data.hour + " uur";
+                    }
+                });
+                return false; //stilleggen van submit
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <form id="form">
+        <fieldset id="time">
+            <legend>Zomertijd - Wintertijd</legend>
+            <p>
+                <label>Selecteer wintertijd of zomertijd:</label>
+
+                <input type="radio"
+                       name="rbTime"
+                       id="zomer"
+                       value="zomer"
+                       checked="checked" />
+                <label for="zomer">Zomertijd</label>
+
+                <input type="radio"
+                       name="rbTime"
+                       id="winter"
+                       value="winter" />
+                <label for="winter">Wintertijd</label>
+            </p>
+
+            <p>
+                <input type="submit" value="kies zomer of winter" />
+            </p>
+        </fieldset>
+    </form>
+    <div id="test"></div>
+</body>
+</html>

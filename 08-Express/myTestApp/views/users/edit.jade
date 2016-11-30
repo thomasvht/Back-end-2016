@@ -1,0 +1,19 @@
+extends ../layout
+block content
+  h1 <u>User : #{user.username}</u>
+  form(method="post" action="/users/#{user.username}")
+      
+    p 
+        label(form="name") Name:
+        input#name(name="name", value=user.name)
+        
+    p
+        label(form="username") Username:
+        input#username(name="username", value=user.username)
+        
+    p 
+        label(form="profession") Profession:
+        input#profession(name="profession", value=user.profession)
+        
+    p
+        input(type="submit", value="Edit")

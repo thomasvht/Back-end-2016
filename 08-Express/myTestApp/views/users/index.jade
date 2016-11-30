@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1 #{title}
+  p <a href="/users/new">Maak een nieuwe gebruike aan</a>
+  <ul>
+  -for (var user in users){
+      <li>
+      <span> #{users[user].username}</span>
+      <span>
+      a(href="/users/"+ encodeURIComponent(user))  "details"
+      </span>
+      <span>
+      a(href="/users/edit/"+ encodeURIComponent(user))  "edit"
+      </span>
+      </li>
+  - };
+  </ul>

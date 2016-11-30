@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  p  #{users.username} #{users.name} heeft als beroep #{users.profession}.
+  
+  p
+    form(method="post" action="/users/#{users.username}")
+      p
+        input(name="_method", type="hidden", value="DELETE")
+        input(type="submit", value="Delete")

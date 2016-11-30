@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Zoek met flickr</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="scripts/jquery-2.1.1.js"></script>-->
+
+</head>
+<body>
+    <section>
+        <form class="myForm" id="myForm" method="post">
+            <p>
+                <label for="search">Zoekterm voor foto's:</label>
+                <input type="text" name="search" value="Howest">
+            </p>
+            <p>
+                <input type="submit" value="Zoek met flickr" />
+            </p>
+
+        </form>
+    </section>
+
+    <section>
+        <div id="searchResults"></div>
+    </section>
+    <script src="scripts/XHR.js"></script>
+    <script src="scripts/start.js"></script>
+    <script>
+        client.api.start;
+    </script>
+</body>
+</html>
