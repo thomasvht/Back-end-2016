@@ -1,0 +1,21 @@
+{
+  "esversion": 6,
+  "node": true,
+  "browser": true,
+  "mocha": true,
+  "undef": true,
+  "unused": false,
+  "predef": [ "MY_GLOBAL" ],
+  "validthis": true,
+  "laxcomma": true,
+  "laxbreak": true,
+  "module": true,
+  "globals": {
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false
+  }
+} 

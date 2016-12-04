@@ -1,0 +1,4 @@
+D:\BE-Node-2014\03.Express\Express-Demo\031-ExpressUnitTesting\Start_Expr4-UnitTesting\Express_Testing\obj\Debug\Express_Testing.njsprojResolveAssemblyReference.cache
+D:\BE-Node-2014\03.Express\Express-Demo\031-ExpressUnitTesting\Start_Expr4-UnitTesting\Express_Testing\bin\Microsoft.NodejsTools.WebRole.dll
+D:\BE-201617\07.Testing\1-Demo-Exp4-UnitTesting\Basis_Expr4-UnitTesting\obj\Debug\Express_Testing.njsprojResolveAssemblyReference.cache
+D:\BE-201617\07.Testing\1-Demo-Exp4-UnitTesting\Basis_Expr4-UnitTesting\bin\Microsoft.NodejsTools.WebRole.dll

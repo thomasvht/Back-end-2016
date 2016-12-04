@@ -2,7 +2,7 @@
 * @Author: thomasvanhoutte
 * @Date:   2016-11-25T15:02:05+01:00
 * @Last modified by:   thomasvanhoutte
-* @Last modified time: 2016-11-25T16:40:33+01:00
+* @Last modified time: 2016-12-02T14:24:15+01:00
 */
 
 let express = require('express');
@@ -14,6 +14,7 @@ let bodyParser = require('body-parser');
 
 let index = require('./routes/index');
 let users = require('./routes/users');
+let usersAPI = require("./routes/usersAPI.js");
 
 let app = express();
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/api/users', usersAPI);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

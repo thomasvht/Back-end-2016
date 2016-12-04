@@ -2,12 +2,13 @@
 * @Author: thomasvanhoutte
 * @Date:   2016-11-25T15:02:05+01:00
 * @Last modified by:   thomasvanhoutte
-* @Last modified time: 2016-11-27T16:32:08+01:00
+* @Last modified time: 2016-12-02T14:10:05+01:00
 */
 
 var express = require('express');
 var router = express.Router();
 var users = require('../data/users.json');
+var loadUser = require("./middleware/loadUser");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -31,7 +32,7 @@ router.post('/new', function(req, res){
 });
 
 // DETAIL
-router.get('/:username', function(req, res, next){
+router.get('/:username', loadUser, function(req, res, next){
   var user = users[req.params.username];
   if (user){
     res.render('users/details', { title: "Details " + user.username, users: user });

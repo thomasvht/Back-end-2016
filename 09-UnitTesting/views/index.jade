@@ -1,0 +1,15 @@
+﻿extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  nav 
+    ul
+        li
+            a(href="/calculatorTestsAssert")  Calculator test met assert
+
+        li  Een test, die zelf een request opzet en het json resultaat controleert:
+            <form action="/sendMessage" method="POST">
+            <input type="text" length="140" name="message">
+            <input type="submit" value="Stuur bericht ">
