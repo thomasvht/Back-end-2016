@@ -1,0 +1,55 @@
+<!--
+@Author: thomasvanhoutte
+@Date:   2016-12-09T15:07:47+01:00
+@Last modified by:   thomasvanhoutte
+@Last modified time: 2016-12-09T15:44:09+01:00
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="/socket.io/socket.io.js">
+</script>
+<title>Chat app</title>
+</head>
+<body>
+<h1>Chat box</h1>
+<section><input id="inpClient" type="text">
+<div id="messages"></div>
+</section>
+<script>
+console.log("sockets initialised");
+
+//0. andere variabelen
+var inpClient = document.getElementById("inpClient");
+var socketResponse = document.getElementById("messages");
+//let date = new Date();
+
+//1. socket initialiseren
+var socket = io.connect(location.protocol + "//" + location.hostname + ":" + location.port);
+
+//2. handlers
+inpClient.onkeydown = function(keyboardEvent){
+  if(keyboardEvent.keyCode === 13){
+    socket.emit("clientMsg", inpClient.value);
+    inpClient.value = "";
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+socket.on("login", function(data){
+  var username = window.prompt("Choose a username: ");;
+  socket.emit("login", username);
+})
+
+socket.on("serverMsg", function(data){
+  var newMsg = document.createElement("div");
+  newMsg.appendChild(document.createTextNode(JSON.parse(data).content));
+  messages.insertBefore(newMsg, messages.childNodes[0]);
+})
+</script>
+</body>
+</html>

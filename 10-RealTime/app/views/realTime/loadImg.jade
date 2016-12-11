@@ -1,0 +1,15 @@
+extends ../layout
+
+block scripts
+  script(src='./socket.io/socket.io.js')
+  script(src='/javascripts/realtime.js')
+  
+block content
+  section
+    h1= title
+    
+    div
+      input(id="selectImg", type="file", multiple)
+      
+  section
+    div(id="images")
