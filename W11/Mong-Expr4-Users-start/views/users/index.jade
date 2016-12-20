@@ -1,0 +1,13 @@
+﻿h1 Users
+
+p
+  a(href="/users/new") Maak een nieuwe user aan:
+
+ul
+  - for(var lastName in userlist) {
+    li
+      span= userlist[lastName].lastName
+      a(href="/users/" + encodeURIComponent(userlist[lastName].lastName), style="margin:0 10px") Details
+      a(class="button",href="/users/edit/"+encodeURIComponent(userlist[lastName].lastName)) Edit
+  - };
+

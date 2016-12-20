@@ -1,0 +1,11 @@
+﻿extends ../layout
+
+block content
+    h1 gegevens voor <i>#{user.name}</i>
+    p  #{user.username} met beroep #{user.profession} 
+
+    form(action="/users/"+encodeURIComponent(user.username), method="POST")
+        input(name="_method", type="hidden", value="DELETE")
+        input(type="submit", value="Verwijder")
+    p
+        a(href="/users") Terug naar users overzicht
