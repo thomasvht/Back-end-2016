@@ -1,0 +1,21 @@
+//-
+  @Author: thomasvanhoutte
+  @Date:   2017-01-12T10:16:03+01:00
+  @Last modified by:   thomasvanhoutte
+  @Last modified time: 2017-01-12T19:29:52+01:00
+
+
+
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/socket.io/socket.io.js")
+    body
+    block content
+    script.
+      var socket = io();
+      socket.on('update', function(){
+        console.log('someone updated a student');
+        });

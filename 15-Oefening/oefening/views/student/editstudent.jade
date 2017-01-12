@@ -1,0 +1,45 @@
+//-
+  @Author: thomasvanhoutte
+  @Date:   2017-01-12T11:53:48+01:00
+  @Last modified by:   thomasvanhoutte
+  @Last modified time: 2017-01-12T18:21:21+01:00
+-//
+  extends ../layout
+
+  block content
+    h3= title
+    br
+    br
+    form#form_edit_student(name="editstudent", method="post", action="/editstudent")
+      input#input_id(type="text", value="#{studentinfo._id}", name="_id" hidden)
+      span Naam
+      span &nbsp;
+      input#input_naam(type="text", value="#{studentinfo.student}", name="student")
+      br
+      br
+      span Geslacht
+      span &nbsp;
+      input#input_geslacht(type="text", value="#{studentinfo.geslacht}", name="geslacht")
+      br
+      br
+      span Straat
+      span &nbsp;
+      input#input_straat(type="text", value="#{studentinfo.straat}", name="straat")
+      br
+      br
+      span Gemeente
+      span &nbsp;
+      input#input_gemeente(type="text", value="#{studentinfo.gemeente}", name="gemeente")
+      br
+      br
+      span Provincie
+      span &nbsp;
+      input#input_provincie(type="text", value="#{studentinfo.provincie}", name="provincie")
+      br
+      br
+      span Email
+      span &nbsp;
+      input#input_email(type="email", value="#{studentinfo.email}", name="email")
+      br
+      br
+      button#submit_student(type="submit") Wijzig

@@ -1,0 +1,26 @@
+//-
+  @Author: thomasvanhoutte
+  @Date:   2017-01-12T12:58:07+01:00
+  @Last modified by:   thomasvanhoutte
+  @Last modified time: 2017-01-12T17:31:16+01:00
+
+
+
+extends ../layout
+
+block content
+  <h3>Student info: </h3>
+  <h4>Algemeen</h4>
+  <label><b>Naam: </b></label><p>#{studentinfo.student}</p>
+  <label><b>Geslacht: </b></label><p>#{studentinfo.geslacht}</p>
+  <label><b>Email: </b></label><p>#{studentinfo.email}</p>
+  <h4>Adres : </h4>
+  <p>#{studentinfo.straat}, #{studentinfo.gemeente}, #{studentinfo.provincie}</p>
+  <br/>
+  <br/>
+  <button onclick=editstudent()>Edit</button>
+  <script>function editstudent(){ window.location.href="/editstudent/#{studentinfo._id}"}</script>
+  <form method="post" action="/deletestudent">
+  <button>Delete</button>
+  </form>
+    

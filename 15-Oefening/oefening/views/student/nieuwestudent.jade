@@ -1,0 +1,49 @@
+//-
+  @Author: thomasvanhoutte
+  @Date:   2017-01-12T10:54:50+01:00
+  @Last modified by:   thomasvanhoutte
+  @Last modified time: 2017-01-12T11:50:18+01:00
+
+
+
+extends ../layout
+
+block content
+  h3= title
+  button(onclick="terug()") <--
+  script.
+    function terug(){ window.location.href="/studentenlijst"}
+  br
+  br
+  form#form_nieuwe_student(name="nieuwestudent", method="post", action="/nieuwestudent")
+    span Naam
+    span &nbsp;
+    input#input_naam(type="text", placeholder="student", name="student")
+    br
+    br
+    span Geslacht
+    span &nbsp;
+    input#input_geslacht(type="text", placeholder="geslacht", name="geslacht")
+    br
+    br
+    span Straat
+    span &nbsp;
+    input#input_straat(type="text", placeholder="straat", name="straat")
+    br
+    br
+    span Gemeente
+    span &nbsp;
+    input#input_gemeente(type="text", placeholder="gemeente", name="gemeente")
+    br
+    br
+    span Provincie
+    span &nbsp;
+    input#input_provincie(type="text", placeholder="provincie", name="provincie")
+    br
+    br
+    span Email
+    span &nbsp;
+    input#input_email(type="email", placeholder="email", name="email")
+    br
+    br
+    button#submit_student(type="submit") submit

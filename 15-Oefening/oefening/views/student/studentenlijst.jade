@@ -1,0 +1,18 @@
+//-
+  @Author: thomasvanhoutte
+  @Date:   2017-01-12T10:45:39+01:00
+  @Last modified by:   thomasvanhoutte
+  @Last modified time: 2017-01-12T15:38:59+01:00
+
+
+
+extends ../layout
+
+block content
+  <h3>Studenten</h3>
+  <button onclick="nieuwestudent()">+</button>
+  <script>function nieuwestudent(){ window.location.href="/nieuwestudent"}</script>
+  ul 
+    each student, i in studentenlijst
+      <li id="student_lijst_item"><a href="/detailstudent/#{student._id}">#{student.email}</a>
+      </li>
